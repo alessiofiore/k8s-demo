@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k8s-demo-configmap
+data:
+  application.properties: |-
+    greeting.message=Hello from

@@ -11,5 +11,5 @@ spec:
         paths:
           - path: /k8s-demo/?(.*)
             backend:
-              serviceName: k8s-demo-cluster-ip-service
+              serviceName: k8s-demo-service
               servicePort: 8080

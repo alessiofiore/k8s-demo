@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k8s-demo-custom-configmap
+data:
+  custom-conf.properties: |-
+    custom.name=K8s
