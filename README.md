@@ -27,9 +27,14 @@
     
 ## Test
 ### Container
-    GET http://localhost:9080/hello -> Hello
+    GET http://localhost:9080/hello -> Hi from Spring
 ### K8s
-    GET http://localhost/k8s-demo/hello -> Hello
+    GET http://localhost/k8s-demo/hello -> Hello from K8S
+    
+    # Edit configmap changing "K8S" value
+    kubectl edit configmap k8s-demo-custom-configmap
+    
+    GET http://localhost/k8s-demo/hello -> Hello from {updated value}
     
 ## Utils
     kubectl describe ing ingress-service

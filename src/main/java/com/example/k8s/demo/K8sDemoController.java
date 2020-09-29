@@ -16,6 +16,6 @@ public class K8sDemoController {
 
     @GetMapping(value = "/hello")
     public String hello() {
-        return config.getMessage() + " " + customConfig.getName() + "!!";
+        return config.getMessage() + " " + customConfig.getName();
     }
 }
