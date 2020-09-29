@@ -4,12 +4,16 @@ spring:
   cloud:
     kubernetes:
       reload:
-#        period: 1000
         enabled: true
-        strategy: restart_context
+        mode: event
+        strategy: refresh
       config: # not needed if spring.application.name is equal to configmap metadata name
 #        name: k8s-demo-configmap # ConfigMap metadata name
         namespace: default
-        sources: ## configure this to load from more han one ConfigMap
+        sources: ## configure this to load from more than one ConfigMap
           - name: k8s-demo-configmap
           - name: k8s-demo-custom-configmap
+#management:
+#  endpoint:
+#    restart:
+#      enabled: true
